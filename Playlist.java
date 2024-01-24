@@ -70,6 +70,17 @@ public class Playlist{
         }
         return sum;
       }
+
+      public void removeUnliked()
+      {
+        for(int i = 0; i < dopamine.size(); i++)
+        {
+          if(dopamine.get(i).isLiked() == false)
+          {
+            dopamine.remove(i);
+          }
+        }
+      }
       
       
 
