@@ -20,13 +20,13 @@ public class Playlist{
       dopamine = new ArrayList<Song>();
       }
       
-      public void addSong(String name, String artist, double dur, boolean liked)
+      public void addSong(String name, String artist, String dur, boolean liked)
       {
         Song track = new Song(name, artist, dur, liked);
         dopamine.add(track);
       }
 
-      public ArrayList likedSongs()
+      public ArrayList<Song> likedSongs()
       {
         ArrayList<Song> goodSongs = new ArrayList<Song>();
         for(int i = 0; i < dopamine.size(); i++)
@@ -61,25 +61,29 @@ public class Playlist{
         }
       }
 
+    
+
       public double totalDuration()
       {
         double sum = 0;
         for(int i = 0; i < dopamine.size(); i++)
         {
-            sum += dopamine.get(i).songDur();
+            sum += dopamine.get(i).calcDuration();
         }
-        return sum;
+        return (sum / 60);
       }
+      
+      
 
 
 
       /**
        * Methods-- Remember that you need to be able to complete all of the following:
-       * Adding a song
-       * 'liking' a song
-       * Removing a specific song
+       * Adding a song X
+       * 'liking' a song X
+       * Removing a specific song X
        * Examining all Songs (a String return or void print makes sense here)
-       * Examining a sublist of all liked songs
+       * Examining a sublist of all liked songs X
        * Determining the total duration of all songs
        * Removing all unliked songs from the playlist (careful with this one!)
        */
