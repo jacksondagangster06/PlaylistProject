@@ -85,6 +85,16 @@ public class Playlist{
           }
         }
       }
+
+      public String allSongs()
+      {
+        String list = "";
+        for(int i = 0; i < dopamine.size(); i++)
+        {
+          list += dopamine.get(i).getName() + ", ";
+        }
+        return list;
+      }
       
       
 
@@ -97,7 +107,7 @@ public class Playlist{
        * Removing a specific song X
        * Examining all Songs (a String return or void print makes sense here)
        * Examining a sublist of all liked songs X
-       * Determining the total duration of all songs
-       * Removing all unliked songs from the playlist (careful with this one!)
+       * Determining the total duration of all songs X
+       * Removing all unliked songs from the playlist (careful with this one!) X
        */
 }
