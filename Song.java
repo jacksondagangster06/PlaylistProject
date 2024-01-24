@@ -58,6 +58,7 @@ public class Song {
         String min = songDur.substring(0, songDur.indexOf(":"));
         sec += Integer.parseInt(min) * 60;
         String secPart = songDur.substring(songDur.indexOf(":") + 1, songDur.length());
+        //String secPart = songDur.substring(0, songDur.indexOf(":") + 1);
         sec += Integer.parseInt(secPart);
         return sec;
     }

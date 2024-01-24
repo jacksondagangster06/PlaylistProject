@@ -55,7 +55,7 @@ public class PlaylistTester {
             }
         }
 
-        System.out.println("\nRemoving the song in position 2 and 4\n");
+        System.out.println("\nRemoving the song in position 1 and 3\n");
 
         p.removeSong(p.dopamine.get(1).getName());
         p.removeSong(p.dopamine.get(3).getName());

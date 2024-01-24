@@ -52,7 +52,7 @@ public class Playlist{
 
       public void removeSong(String name)
       {
-        for(int i = 0; i < dopamine.size(); i++)
+        for(int i = dopamine.size() - 1; i >= 0; i--) 
         {
             if(dopamine.get(i).getName().equals(name))
             {
@@ -71,6 +71,19 @@ public class Playlist{
             sum += dopamine.get(i).calcDuration();
         }
         return (sum / 60);
+      }
+      
+      
+
+      public void removeUnliked()
+      {
+        for(int i = 0; i < dopamine.size(); i++)
+        {
+          if(dopamine.get(i).isLiked() == false)
+          {
+            dopamine.remove(i);
+          }
+        }
       }
       
       
